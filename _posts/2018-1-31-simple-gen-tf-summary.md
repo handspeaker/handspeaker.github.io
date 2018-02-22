@@ -29,14 +29,17 @@ title: 记录tensorflow summary的简单方法
 
 但是在设计模型结构的时候，无论你是train还是test，结构都是一样的，每次只能计算一个batch的loss、准确率，没法单独为testset做平均。于是我想到了如下投机取巧的方法：
 
-	test_summaries = tf.Summary()
-	loss_val = test_summaries.value.add()
-	loss_val.tag = 'loss'
-	loss_val.simple_value = average_loss / batch_num
-	acc_val = test_summaries.value.add()
-	acc_val.tag = 'accuracy'
-	acc_val.simple_value = average_accuracy / batch_num
-	test_file_writer.add_summary(test_summaries, step)
+```
+test_summaries = tf.Summary()
+loss_val = test_summaries.value.add()
+loss_val.tag = 'loss'
+loss_val.simple_value = average_loss / batch_num
+acc_val = test_summaries.value.add()
+acc_val.tag = 'accuracy'
+acc_val.simple_value = average_accuracy / batch_num
+test_file_writer.add_summary(test_summaries, step)
+```
 
+其实就是自己创建一个`test_summariess`，把需要的东西填进去，模仿利用sess.run生成的`train_summary_results`。大家如果感兴趣可以把`train_summary_results`打印出来，其实就是这么个结构。目前我只保存过`scalar`，但是其他值应该也可以这么保存。
 
-其实就是自己创建一个 `test_summariess` ，把需要的东西填进去，模仿利用sess.run生成的 `train_summary_results` 。大家如果感兴趣可以把 `train_summary_results` 打印出来，其实就是这么个结构。目前我只保存过 `scalar` ，但是其他值应该也可以这么保存。
+`sdsdd`
