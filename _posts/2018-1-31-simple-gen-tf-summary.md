@@ -42,4 +42,10 @@ test_file_writer.add_summary(test_summaries, step)
 
 其实就是自己创建一个`test_summariess`，把需要的东西填进去，模仿利用sess.run生成的`train_summary_results`。大家如果感兴趣可以把`train_summary_results`打印出来，其实就是这么个结构。目前我只保存过`scalar`，但是其他值应该也可以这么保存。
 
-`sdsdd`
+```javascript
+/* Some pointless Javascript */
+var rawr = ["r", "a", "w", "r"];
+```
+
+
+
