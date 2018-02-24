@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+机器视觉算法工程师@美团
 
-### More Information
+### 一些兴趣点
 
-A place to include any other types of information that you'd like to include about yourself.
++ 人脸相关算法
++ OCR
++ GAN
++ Tensorflow
 
-### Contact me
+### 部门持续招聘中，有意者请联系我
 
-[email@domain.com](mailto:email@domain.com)
+[handspeaker@163.com](mailto:handspeaker@163.com)
